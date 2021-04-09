@@ -1,0 +1,1 @@
+This repo contains useful functions which I plan to transform to classes some day.
