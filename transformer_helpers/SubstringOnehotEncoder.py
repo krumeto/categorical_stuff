@@ -5,7 +5,7 @@ from sklearn.decomposition import TruncatedSVD
 from sklearn.feature_extraction.text import HashingVectorizer, CountVectorizer
 from sklearn.feature_extraction.text import TfidfTransformer
 from sklearn.pipeline import make_pipeline
-
+import pandas as pd
 
 
 class SubstringOnehotEncoder(TransformerMixin, BaseEstimator):

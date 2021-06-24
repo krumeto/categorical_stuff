@@ -8,6 +8,8 @@ from itertools import combinations
 from scipy.stats import chi2_contingency
 import numpy as np
 
+from collections import Counter
+
 @pd.api.extensions.register_dataframe_accessor("cats")
 class CatsAccessor:
     """A class of useful categorical stuff to add to pandas
