@@ -174,3 +174,19 @@ def transform_diagnosis(df):
   
   df = df.drop('fddiagtx', axis=1)
   return df
+
+
+def clean_floats(x):
+  if pd.isnull(x):
+    return x
+  elif type(x) is float:
+    return str(int(x))
+  else: 
+    return x
+  
+def clean_up_floats(df):
+  for col in df.columns:
+    if is_object_dtype(df[col]) or is_string_dtype(df[col]):
+      df[col] = df[col].apply(clean_floats)
+  print('Shape after clean_floats:', df.shape)
+  return df
